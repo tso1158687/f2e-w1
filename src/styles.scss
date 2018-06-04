@@ -15,24 +15,68 @@ $borderGray:#E1E1E1;
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 * {
   font-family: 'Noto Sans TC';
+  box-sizing: border-box;
 }
-html{
+
+html {
   font-size: 16px;
 }
 
 // text style
-.text-title{
+@mixin textTitle{
   font-size: 1.5rem;
   font-weight: bold;
 }
-.text-subtitle{
+.text-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.text-subtitle {
   font-style: 1.25rem;
   font-weight: bold;
 }
-.text-normal{
+
+.text-normal {
   font-size: 1rem;
 }
-.text-status{
+
+.text-status {
   font-size: 1.5rem;
   font-style: italic;
+}
+
+// body
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// header
+header {
+  width: 100%;
+  height: 76px;
+  margin: 0;
+  background-color: $lightBlue;
+  div{
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    span{
+      display: inline-block;
+      width: 33.3%;
+      text-align: center;
+      height: 100%;
+      line-height: 76px;
+      @include textTitle;
+      &.active{
+
+        color: $white;
+        border-bottom: 5px solid $darkBlue;
+      }
+      &.inactive{
+        color: $darkBlue
+      }
+    }
+  }
 }
