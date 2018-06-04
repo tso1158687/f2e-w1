@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+// standard setting
+// color
+$lightBlue:#4A90E2;
+$darkBlue:#00408B;
+$red:#D0021B;
+$yellow:#F5A623;
+$lightYellow:#FFF2DC;
+$lightGray:#F2F2F2;
+$middleGray:#C8C8C8;
+$darkGray:#757575;
+$white:#FFFFFF;
+$black:#000000;
+$borderGray:#E1E1E1;
+// font
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: 'Noto Sans TC';
+}
+html{
+  font-size: 16px;
+}
+
+// text style
+.text-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.text-subtitle{
+  font-style: 1.25rem;
+  font-weight: bold;
+}
+.text-normal{
+  font-size: 1rem;
+}
+.text-status{
+  font-size: 1.5rem;
+  font-style: italic;
+}
