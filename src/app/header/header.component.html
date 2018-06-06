@@ -1,7 +1,7 @@
 <header>
   <div>
-    <span class="active">我的任務</span>
-    <span class="inactive">進行中</span>
-    <span class="inactive">完成</span>
+    <a routerLink="/my-task" [ngClass]="{'active': isActive==='mytask','inactive': isActive!=='mytask'}" (click)="click('mytask')">我的任務</a>
+    <a routerLink="/in-progress" [ngClass]="{'active': isActive==='inprogress','inactive': isActive!=='inprogress'}" (click)="click('inprogress')">進行中</a>
+    <a routerLink="/completed" [ngClass]="{'active': isActive==='completed','inactive': isActive!=='completed'}" (click)="click('completed')">完成</a>
   </div>
 </header>

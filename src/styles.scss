@@ -62,15 +62,15 @@ header {
     width: 1024px;
     height: 100%;
     margin: 0 auto;
-    span{
+    a{
       display: inline-block;
       width: 33.3%;
       text-align: center;
       height: 100%;
       line-height: 76px;
+      text-decoration: none;
       @include textTitle;
       &.active{
-
         color: $white;
         border-bottom: 5px solid $darkBlue;
       }

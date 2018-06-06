@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  isActive = 'mytask';
+  constructor() {
 
-  constructor() { }
-
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    console.log(this.isActive);
+  }
+  click(link) {
+    this.isActive = link;
+    console.log(this.isActive);
+  }
 }
