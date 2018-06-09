@@ -95,9 +95,54 @@ header {
 .task {
   border-radius: 5px;
   border: 1px solid $middleGray;
+  background-color: $lightGray;
+
+  .task-simple{
+    padding: 10px 72px;
+    .task-main{
+      input[type=checkbox]{
+        width: 24px;
+        height: 24px;
+        background-color: $white;
+        box-shadow: none;
+      }
+      .text{
+
+      }
+      .function{
+        i{
+          padding-right: 32px;
+        }
+      }
+    }
+    .task-simple-info{
+
+    }
+  }
   .task-detail {
     .cate{
       padding: 10px 72px;
+      .cate-content{
+        padding-top: 10px;
+        padding-left: 19px;
+        .add-file{
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          background-color: $middleGray;
+          text-align: center;
+          line-height: 32px;
+          border-radius: 2px;
+          i{
+            color: $white;
+          }
+        }
+        textarea{
+          width: 100%;
+          resize: none;
+          padding: 8px 16px;
+        }
+      }
     }
     .bottom {
       width: 100%;
