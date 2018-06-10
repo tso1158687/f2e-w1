@@ -99,6 +99,7 @@ header {
 
   .task-simple{
     padding: 10px 72px;
+    height: 102px;
     .task-main{
       >div{
         display: inline-block;
@@ -112,22 +113,31 @@ header {
       .text{
         width:300px;
       }
-      .function{
+      .action{
+        float: right;
         i{
           padding-right: 32px;
         }
       }
     }
     .task-simple-info{
-
+      padding: 5px 0;
+      i{
+        padding-right: 15px;
+      }
     }
   }
   .task-detail {
     .cate{
       padding: 10px 72px;
+      .cate-title{
+        i{
+          padding-right: 11px;
+        }
+      }
       .cate-content{
         padding-top: 10px;
-        padding-left: 19px;
+        padding-left: 30px;
         .add-file{
           display: inline-block;
           width: 32px;
@@ -156,13 +166,22 @@ header {
         height: 60px;
         text-align: center;
         line-height: 60px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
         &:first-child {
           background-color: $white;
           color: $red;
+          &:hover{
+            background-color: #fdfdfd;
+          }
         }
         &:last-child {
           background-color: $lightBlue;
           color: $white;
+          &:hover{
+            background-color: #3982d7;
+          }
         }
         i {
           margin-right: 10px;
@@ -170,4 +189,13 @@ header {
       }
     }
   }
+}
+// add-task
+.add-task-simple{
+  height: 65px;
+  padding: 0px 72px;
+  border: 2px solid $middleGray;
+  border-radius: 5px;
+  line-height: 65px;
+  background-color: $white;
 }
