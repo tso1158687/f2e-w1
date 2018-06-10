@@ -7,6 +7,7 @@ import { InProgressComponent } from './in-progress/in-progress.component';
 import { CompletedComponent } from './completed/completed.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './/app-routing.module';
     MyTasksComponent,
     InProgressComponent,
     CompletedComponent,
-    HeaderComponent
+    HeaderComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,

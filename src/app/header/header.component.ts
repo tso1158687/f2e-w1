@@ -12,10 +12,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.isActive);
   }
   click(link) {
     this.isActive = link;
-    console.log(this.isActive);
   }
 }
