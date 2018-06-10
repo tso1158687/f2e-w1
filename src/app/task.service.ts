@@ -45,7 +45,6 @@ export class TaskService {
   ];
   constructor() { }
   getData() {
-    console.log('asd');
     return this.tasks;
   }
 }
