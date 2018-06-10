@@ -92,53 +92,117 @@ header {
 }
 
 // task
-.task,.add-task {
+.task,
+.add-task {
   border-radius: 5px;
   border: 1px solid $middleGray;
   background-color: $lightGray;
-  margin-bottom: 10px;
-  .task-simple{
+  margin-top: 10px;
+
+  .task-simple {
     padding: 10px 72px;
     height: 102px;
-    .task-main{
-      >div{
+    &.is-favorite{
+      background-color: $lightYellow;
+    }
+    .task-main {
+      >div {
         display: inline-block;
       }
-      input[type=checkbox]{
-        width: 24px;
-        height: 24px;
+      /* The container */
+      .container {
+        display: inline-block;
+        width: 750px;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @include textTitle();
+      }
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        border-radius: 2px;
         background-color: $white;
-        box-shadow: none;
       }
-      .text{
-        width:300px;
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked~.checkmark {
+        background-color: $lightBlue;
       }
-      .action{
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      /* Show the checkmark when checked */
+      .container input:checked~.checkmark:after {
+        display: block;
+      }
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .text {
+        width: 300px;
+      }
+      .action {
         float: right;
-        i{
+        span {
           padding-right: 32px;
+          i {
+            cursor: pointer;
+            &.is-favorite {
+              color: $yellow;
+            }
+            &.is-edit {
+              color: $lightBlue;
+            }
+          }
         }
       }
     }
-    .task-simple-info{
+    .task-simple-info {
       padding: 5px 0;
-      i{
+      i {
         padding-right: 15px;
       }
     }
   }
   .task-detail {
-    .cate{
+    .cate {
       padding: 10px 72px;
-      .cate-title{
-        i{
+      .cate-title {
+        i {
           padding-right: 11px;
         }
       }
-      .cate-content{
+      .cate-content {
         padding-top: 10px;
         padding-left: 30px;
-        .add-file{
+        .add-file {
           display: inline-block;
           width: 32px;
           height: 32px;
@@ -146,11 +210,11 @@ header {
           text-align: center;
           line-height: 32px;
           border-radius: 2px;
-          i{
+          i {
             color: $white;
           }
         }
-        textarea{
+        textarea {
           width: 100%;
           resize: none;
           padding: 8px 16px;
@@ -172,14 +236,14 @@ header {
         &:first-child {
           background-color: $white;
           color: $red;
-          &:hover{
+          &:hover {
             background-color: #fdfdfd;
           }
         }
         &:last-child {
           background-color: $lightBlue;
           color: $white;
-          &:hover{
+          &:hover {
             background-color: #3982d7;
           }
         }
@@ -190,11 +254,12 @@ header {
     }
   }
 }
+
 // add-task
-.add-task-simple{
+.add-task-simple {
   height: 65px;
   padding: 0px 72px;
-  border: 2px solid $middleGray;
+  border: 1px solid $middleGray;
   border-radius: 5px;
   line-height: 65px;
   background-color: $white;
