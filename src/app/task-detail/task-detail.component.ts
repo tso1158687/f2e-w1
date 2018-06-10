@@ -8,6 +8,7 @@ import { TaskService } from '../task.service';
 })
 export class TaskDetailComponent implements OnInit {
   tasks: any;
+  showNewDetail: false;
   constructor(
     private service: TaskService
   ) { }

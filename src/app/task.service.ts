@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TaskService {
-  // status 0:進行中 1:已完成
+  // done true:完成,false:進行中
   tasks = [
     {
       name: '第一個任務',
-      status: 0,
+      done: true,
       showDetail: false,
       isFavorite: true,
       hasFile: false,
@@ -17,7 +17,7 @@ export class TaskService {
     },
     {
       name: '第二個任務',
-      status: 0,
+      done: true,
       showDetail: false,
       isFavorite: false,
       hasFile: true,
@@ -26,7 +26,7 @@ export class TaskService {
     },
     {
       name: '吃飯',
-      status: 1,
+      done: false,
       showDetail: false,
       isFavorite: false,
       hasFile: true,
@@ -35,7 +35,7 @@ export class TaskService {
     },
     {
       name: '午餐',
-      status: 1,
+      done: false,
       showDetail: false,
       isFavorite: false,
       hasFile: false,

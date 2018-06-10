@@ -105,6 +105,9 @@ header {
     &.is-favorite{
       background-color: $lightYellow;
     }
+    &.show-detail{
+      border-bottom: 1px solid $middleGray;
+    }
     .task-main {
       >div {
         display: inline-block;
@@ -122,6 +125,9 @@ header {
         -ms-user-select: none;
         user-select: none;
         @include textTitle();
+        &.done{
+          text-decoration: line-through;
+        }
       }
       /* Hide the browser's default checkbox */
       .container input {
@@ -165,9 +171,9 @@ header {
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
       }
-      .text {
-        width: 300px;
-      }
+      // .text {
+      //   width: 300px;
+      // }
       .action {
         float: right;
         span {
@@ -263,4 +269,5 @@ header {
   border-radius: 5px;
   line-height: 65px;
   background-color: $white;
+  cursor: pointer;
 }
