@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { MyTasksComponent } from './my-tasks/my-tasks.component';
 import { InProgressComponent } from './in-progress/in-progress.component';
@@ -20,7 +19,7 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
