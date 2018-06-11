@@ -8,13 +8,14 @@ import { TaskService } from '../task.service';
 })
 export class TaskDetailComponent implements OnInit {
   tasks: any;
-  showNewDetail: false;
+  showNewDetail: any;
   constructor(
     private service: TaskService
   ) { }
 
   ngOnInit() {
     this.tasks = this.service.getData();
+    this.showNewDetail = false;
   }
 
 }
